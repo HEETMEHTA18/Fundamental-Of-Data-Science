@@ -1,5 +1,11 @@
+"""Digital clock that displays current time in real-time.
+
+Press Ctrl+C to stop the clock.
+"""
+
 import time
 from datetime import datetime
+
 
 print(" Digital Clock (Press Ctrl+C to stop)")
 

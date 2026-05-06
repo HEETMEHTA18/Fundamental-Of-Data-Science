@@ -1,2 +1,4 @@
-print("hello world ");
-print("hello world 2");
+"""Simple hello world program."""
+
+print("hello world")
+print("hello world 2")
