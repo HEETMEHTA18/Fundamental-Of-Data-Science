@@ -1,0 +1,74 @@
+Titanic:
+data understanding 
+task 1: 
+check the first 15 rows then check categorical and numerical datatypes
+df.head(15)
+
+task 2:
+check mean of the total survivals in the titanic disasters and category wise survival rate in which we can say that which  class has the higher survival rate 1st ot 2nd so for business analysis.
+
+
+task 3:
+dropna colums total sum and total colums minus 100 gives the coloms which are having proper data 
+and 
+dropna.sum/len(df) *100  =   percentage of the coloums which are having the missing values.
+
+task 4:gender bases survival rate 
+we can say that which gender has the highest survival ratio then the other and it helps us with the info that what happened with the incedent
+
+task5:
+port analysis:
+ it is used to give info that which port has high class or other class peoples and give info that which port has this passgenger count 
+
+this all are been done with the groupby and the mean of the ratio of total vs given condition.
+preparing data
+
+this was the data info and analytics now the EDA:
+task 6:
+age imputation In this the values which are been missing in the dataset are been replaced with either 1:avg of the coloum 
+2:mean of the coloum 
+3:adjacent mean/avg of the data
+  
+this is used to make the data consistent and when in testing and adding the data with fit into the model it should have the consistent data not the random or the null data.
+
+
+
+task 7: 
+now the use of the encoding for the categorical data so the every category like gender and ports are been propely encoded with the label(0/1) and one hot encodeing(every port is considered equally) 
+
+task 8:tile extraction and feature normalization
+from the name coloum some keywords/stopwords frame is been used so that the number of people of the profession of carrer can be identified 
+with the normailzation function
+
+like work status: mr mrs 
+miss/mrs female 
+master  can be avg age of 18 
+so by this we can analyse the data according to the survival rate.
+data evaluation :
+
+
+
+task 9:feature selection 
+and chi square test: in this multiple feature are been combined and new features like familysize, is alone and fare_perperson is evaluated into the 
+
+
+Feature	       Formula	               Meaning
+FamilySize	SibSp + Parch + 1	Total family aboard
+IsAlone		FamilySize == 1	Binary: traveling solo?
+Fare_per_person	Fare / FamilySize	Fare normalized by group
+AgeGroup	Bins (Child, Young Adult, etc.)	Age categorized
+
+
+now the chi square is been used in which the (e-o)^2/e gives the value of p.
+in which the chi -square is been used in which ::
+
+for every feature the statstic is given p value is been determined and with degree of freedom in which the row-1 * colom -1
+task 10:
+ml pipeline building
+knn is been used so that the nearest age person from the dataset can be find out using the knn for the next input from the user.
+
+
+used the robust scalar so that x = x -xmeadian/ x75-x25
+so this makes the data normalized.
+
+and after all the mi score is been formed then the top mi scores feature are been used for the model training and testing
