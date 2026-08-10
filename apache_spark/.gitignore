@@ -1,0 +1,9 @@
+# Generated raw datasets (large)
+data/*.csv
+
+# Spark generated output
+data/processed/
+outputs/
+
+# Notebook execution cache
+.ipynb_checkpoints/
