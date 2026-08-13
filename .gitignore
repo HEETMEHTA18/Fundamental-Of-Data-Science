@@ -125,3 +125,11 @@ Thumbs.db
 
 # Anaconda
 anaconda_projects/
+
+# HuggingFace / model caches
+trustfin_slm_workspace/cache/
+*.incomplete
+*.lock
+
+# Large datasets (too big for git)
+trustfin_slm_workspace/data/
